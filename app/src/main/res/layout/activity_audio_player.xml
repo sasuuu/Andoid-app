@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintWidth_min="24px"
+    tools:context=".AudioPlayer">
+
+    <Button
+        android:id="@+id/dir_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_backgrond"
+        android:text="@string/directory_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dir_path"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/directory_not_selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/selected_directory"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dir_select" />
+
+    <SeekBar
+        android:id="@+id/progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_pause_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="00:00:00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <TextView
+        android:id="@+id/end_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="00:00:00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <Button
+        android:id="@+id/start_pause_btn"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/start_btn"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/progress_bar"
+        app:layout_constraintWidth_min="24px"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:hint="@string/no_mp3_files"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="299dp" />
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/next_track_btn"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/next_btn"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/start_pause_btn"
+        app:layout_constraintTop_toTopOf="@+id/start_pause_btn"
+        app:layout_constraintWidth_min="24px"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <Button
+        android:id="@+id/volume_btn"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/volume_btn"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/next_track_btn"
+        app:layout_constraintTop_toTopOf="@+id/next_track_btn"
+        app:layout_constraintWidth_min="24px"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <Button
+        android:id="@+id/rand_btn"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/no_rand_btn"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/previous_track_btn"
+        app:layout_constraintTop_toTopOf="@+id/previous_track_btn"
+        app:layout_constraintWidth_min="24px"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <Button
+        android:id="@+id/previous_track_btn"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/prev_btn"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/start_pause_btn"
+        app:layout_constraintTop_toTopOf="@+id/start_pause_btn"
+        app:layout_constraintWidth_min="24px"
+        app:layout_constraintWidth_percent="0.1" />
+
+</android.support.constraint.ConstraintLayout>

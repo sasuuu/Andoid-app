@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="ja" uuid="c2ce61b2-c7b8-46e8-80a4-33ba71673635">
+      <database-info product="MySQL" version="5.5.54" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1" family="MYSQL" exact-version="5.5.54">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>fmerta</user-name>
+      <introspection-schemas>*:fmerta</introspection-schemas>
+      <ssh-properties>
+        <enabled>false</enabled>
+        <proxy-host>149.156.136.154</proxy-host>
+        <user>fmerta</user>
+        <use-password>true</use-password>
+        <auth-type>PASSWORD</auth-type>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>
